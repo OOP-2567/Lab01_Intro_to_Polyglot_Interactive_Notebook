@@ -97,6 +97,7 @@ Console.WriteLine("The value: {0}.", 500);
 #!csharp
 
 // Coding Area
+Console.WriteLine("The value: {0:C}.", 500);
 
 #!markdown
 
