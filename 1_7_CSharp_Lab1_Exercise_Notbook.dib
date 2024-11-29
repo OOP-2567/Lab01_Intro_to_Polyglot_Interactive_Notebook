@@ -64,6 +64,7 @@ Console.WriteLine("Here comes a slash \\");
 #!csharp
 
 // Coding Area
+Console.WriteLine("|{0, 10}|", 999);
 
 #!markdown
 
