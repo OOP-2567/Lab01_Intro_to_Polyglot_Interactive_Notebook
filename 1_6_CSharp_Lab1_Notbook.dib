@@ -24,6 +24,8 @@ Console.Write("Hello");
 #!csharp
 
 // Coding Area
+Console.Write("Hello");
+Console.Write("Hello");
 
 #!markdown
 
