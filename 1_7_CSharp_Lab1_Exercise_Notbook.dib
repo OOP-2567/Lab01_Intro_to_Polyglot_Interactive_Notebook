@@ -53,6 +53,7 @@ Console.WriteLine("Hello " + "World");
 #!csharp
 
 // Coding Area
+Console.WriteLine("Here comes a slash \\");
 
 #!markdown
 
