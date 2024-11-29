@@ -9,3 +9,6 @@
 
 
 ![alt text](./Pictures/image-14.png)
+
+ผลลัพธ์
+![alt text](<สกรีนช็อต 2024-11-29 145716.png>)
