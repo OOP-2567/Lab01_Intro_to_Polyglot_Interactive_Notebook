@@ -14,6 +14,8 @@
 #!csharp
 
 // Coding Area
+String name = "Hello";
+ Console.WriteLine(String.Format("{0} there. I said {0}! {0}???", name));
 
 #!markdown
 
@@ -24,6 +26,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine(String.Format("{0} there. I said {0}! {0}???", name));
 
 #!markdown
 
@@ -34,6 +37,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("Hello " + "World");
 
 #!markdown
 
@@ -44,6 +48,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("Here comes a slash \\");
 
 #!markdown
 
@@ -54,6 +59,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("|{0, 10}|", 999);
 
 #!markdown
 
@@ -64,6 +70,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("|{0, -10}|", 000);
 
 #!markdown
 
@@ -74,6 +81,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("the value: {0}.", 500);
 
 #!markdown
 
@@ -84,6 +92,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("the value: {0:c}.", 500);
 
 #!markdown
 
@@ -94,6 +103,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("{0,-10:F4}", 12.3456789);
 
 #!markdown
 
@@ -104,6 +114,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("{0,10:C}", 12.3456789);
 
 #!markdown
 
@@ -114,6 +125,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("{0,-10:E3}", 12.3456789);
 
 #!markdown
 
@@ -124,6 +136,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("{0,-10:x}", 65535);
 
 #!markdown
 
@@ -134,6 +147,7 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("{0,-10:X}", 65535);
 
 #!markdown
 
@@ -147,6 +161,10 @@
 #!csharp
 
 // Coding Area
+int i;
+Console.WriteLine("Value\tSquared\tCubed");
+for(i = 1; i < 10; i++)
+   Console.WriteLine("{0}\t{1}\t{2}", i, i*i, i*i*i);
 
 #!markdown
 
@@ -157,3 +175,4 @@
 #!csharp
 
 // Coding Area
+Console.WriteLine("{0:#.###}.", 1234.56789);
