@@ -24,6 +24,8 @@ Console.Write("Hello");
 #!csharp
 
 // Coding Area
+Console.Write("Hello");
+Console.Write("Hello");
 
 #!markdown
 
@@ -41,6 +43,8 @@ Console.Write("Hello" + Environment.NewLine);
 #!csharp
 
 // Coding Area
+Console.Write("Hello" + Environment.NewLine);
+Console.Write("Hello" + Environment.NewLine);
 
 #!markdown
 
@@ -64,6 +68,8 @@ Console.WriteLine("World!");
 #!csharp
 
 // Coding Area
+Console.Write("Hello, ");
+Console.WriteLine("World!");
 
 #!markdown
 
@@ -82,6 +88,9 @@ Console.WriteLine("This is text 3.");
 #!csharp
 
 // Coding Area
+Console.WriteLine("This is text 1.");
+Console.WriteLine("This is text 2.");
+Console.WriteLine("This is text 3.");
 
 #!markdown
 
@@ -105,6 +114,7 @@ Console.WriteLine("{1}, {0} and {1}", 3, 6);
 #!csharp
 
 // Coding Area
+Console.WriteLine("{1}, {0} and {1}", 3, 6);
 
 #!markdown
 
@@ -117,6 +127,26 @@ Console.WriteLine("{1}, {2} and {1}", 3, 6);
 #!csharp
 
 // Coding Area
+Console.WriteLine("{1}, {2} and {1}", 3, 6);
+
+#!markdown
+
+จากที่ได้ run code แสดงผลลัพท์ ดังนี้ 
+Error: System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+at System.String.Format(IFormatProvider provider, String format, Object arg0, Object arg1)
+at System.IO.TextWriter.WriteLine(String format, Object arg0, Object arg1)
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.<>n__36(String format, Object arg0, Object arg1)
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.<>c__DisplayClass46_0.<WriteLine>b__0() in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 290
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.TrackWriteOperation(Action action) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 79
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.WriteLine(String format, Object arg0, Object arg1) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 290
+at Microsoft.DotNet.Interactive.Utility.MultiplexingTextWriter.WriteLine(String format, Object arg0, Object arg1) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\MultiplexingTextWriter.cs:line 289
+at System.IO.TextWriter.SyncTextWriter.WriteLine(String format, Object arg0, Object arg1)
+at System.Console.WriteLine(String format, Object arg0, Object arg1)
+at Submission#6.<<Initialize>>d__0.MoveNext()
+--- End of stack trace from previous location ---
+at Microsoft.CodeAnalysis.Scripting.ScriptExecutionState.RunSubmissionsAsync[TResult](ImmutableArray`1 precedingExecutors, Func`2 currentExecutor, StrongBox`1 exceptionHolderOpt, Func`2 catchExceptionOpt, CancellationToken cancellationToken)
 
 #!markdown
 
@@ -145,6 +175,16 @@ Console.WriteLine("{0, 20}", 1);
 #!csharp
 
 // Coding Area
+Console.WriteLine("00000000011111111112");
+Console.WriteLine("12345678901234567890");
+Console.WriteLine("{0, 0}", 1);
+Console.WriteLine("{0, 1}", 1);
+Console.WriteLine("{0, 2}", 1);
+Console.WriteLine("{0, 3}", 1);
+Console.WriteLine("{0, 5}", 1);
+Console.WriteLine("{0, 10}", 1);
+Console.WriteLine("{0, 15}", 1);
+Console.WriteLine("{0, 20}", 1);
 
 #!markdown
 
@@ -165,6 +205,13 @@ Console.WriteLine("{0, 0:X}", n);
 #!csharp
 
 // Coding Area
+int n = 123456789;
+Console.WriteLine("{0, 0:E}", n);
+Console.WriteLine("{0, 0:F}", n);
+Console.WriteLine("{0, 0:G}", n);
+Console.WriteLine("{0, 0:N}", n);
+Console.WriteLine("{0, 0:P}", n);
+Console.WriteLine("{0, 0:X}", n);
 
 #!markdown
 
@@ -185,6 +232,13 @@ Console.WriteLine("{0, 20:X}", 1);
 #!csharp
 
 // Coding Area
+int n = 123456789;
+Console.WriteLine("{0, 20:E}", 1);
+Console.WriteLine("{0, 20:F}", 1);
+Console.WriteLine("{0, 20:G}", 1);
+Console.WriteLine("{0, 20:N}", 1);
+Console.WriteLine("{0, 20:P}", 1);
+Console.WriteLine("{0, 20:X}", 1);
 
 #!markdown
 
@@ -203,3 +257,9 @@ Console.WriteLine("{0:F5}", i);
 #!csharp
 
 // Coding Area
+const double i = 123.456789d;
+Console.WriteLine("{0:F1}", i);
+Console.WriteLine("{0:F2}", i);
+Console.WriteLine("{0:F3}", i);
+Console.WriteLine("{0:F4}", i);
+Console.WriteLine("{0:F5}", i);
