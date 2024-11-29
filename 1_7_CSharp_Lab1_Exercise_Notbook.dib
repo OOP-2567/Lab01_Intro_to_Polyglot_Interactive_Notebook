@@ -75,6 +75,7 @@ Console.WriteLine("|{0, 10}|", 999);
 #!csharp
 
 // Coding Area
+Console.WriteLine("|{0,-10}|", 000);
 
 #!markdown
 
