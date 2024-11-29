@@ -107,6 +107,8 @@ System.Console.WriteLine("The value of var1 is {0}", var1);
 #!csharp
 
 // เขียน code ตามตัวอย่างด้านบน
+int var1 = 5;
+System.Console.WriteLine("The value of var1 is {0}", var1);
 // << คลิกเพื่อรัน code ในบล็อกนี้
 
 #!markdown
