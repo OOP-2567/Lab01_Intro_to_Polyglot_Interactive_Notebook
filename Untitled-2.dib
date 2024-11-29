@@ -1,0 +1,56 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!csharp
+
+Error: System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+at System.String.Format(IFormatProvider provider, String format, Object arg0, Object arg1)
+at System.IO.TextWriter.WriteLine(String format, Object arg0, Object arg1)
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.<>n__36(String format, Object arg0, Object arg1)
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.<>c__DisplayClass46_0.<WriteLine>b__0() in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 290
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.TrackWriteOperation(Action action) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 79
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.WriteLine(String format, Object arg0, Object arg1) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 290
+at Microsoft.DotNet.Interactive.Utility.MultiplexingTextWriter.WriteLine(String format, Object arg0, Object arg1) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\MultiplexingTextWriter.cs:line 289
+at System.IO.TextWriter.SyncTextWriter.WriteLine(String format, Object arg0, Object arg1)
+at System.Console.WriteLine(String format, Object arg0, Object arg1)
+at Submission#6.<<Initialize>>d__0.MoveNext()
+--- End of stack trace from previous location ---
+at Microsoft.CodeAnalysis.Scripting.ScriptExecutionState.RunSubmissionsAsync[TResult](ImmutableArray`1 precedingExecutors, Func`2 currentExecutor, StrongBox`1 exceptionHolderOpt, Func`2 catchExceptionOpt, CancellationToken cancellationToken)
+
+#!markdown
+
+//จากการรันโปรแกรมมี Error ดังนี้
+Error: System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+at System.String.Format(IFormatProvider provider, String format, Object arg0, Object arg1)
+at System.IO.TextWriter.WriteLine(String format, Object arg0, Object arg1)
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.<>n__36(String format, Object arg0, Object arg1)
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.<>c__DisplayClass46_0.<WriteLine>b__0() in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 290
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.TrackWriteOperation(Action action) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 79
+at Microsoft.DotNet.Interactive.Utility.ObservableStringWriter.WriteLine(String format, Object arg0, Object arg1) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\ObservableStringWriter.cs:line 290
+at Microsoft.DotNet.Interactive.Utility.MultiplexingTextWriter.WriteLine(String format, Object arg0, Object arg1) in D:\a\_work\1\s\src\Microsoft.DotNet.Interactive\Utility\MultiplexingTextWriter.cs:line 289
+at System.IO.TextWriter.SyncTextWriter.WriteLine(String format, Object arg0, Object arg1)
+at System.Console.WriteLine(String format, Object arg0, Object arg1)
+at Submission#6.<<Initialize>>d__0.MoveNext()
+--- End of stack trace from previous location ---
+at Microsoft.CodeAnalysis.Scripting.ScriptExecutionState.RunSubmissionsAsync[TResult](ImmutableArray`1 precedingExecutors, Func`2 currentExecutor, StrongBox`1 exceptionHolderOpt, Func`2 catchExceptionOpt, CancellationToken cancellationToken)
+
+#!markdown
+
+//คำตอบ
+ตรวจสอบให้แน่ใจว่าในสตริงรูปแบบที่ใช้ (เช่น "Hello {0}, your balance is {1}") จำนวนตัวแทนตรงกับจำนวนอาร์กิวเมนต์ที่ส่งไป
+ถ้าเกิดข้อผิดพลาดเช่นนี้ใน WriteLine หรือ String.Format ให้ตรวจสอบให้แน่ใจว่าได้ส่งอาร์กิวเมนต์ครบถ้วนตามที่ต้องการ
+
+#!markdown
+
+//วิธีการแก้ไข
+จากสแต็คแทรซที่คุณให้มา ดูเหมือนว่าจะเกิดข้อผิดพลาดในฟังก์ชัน ObservableStringWriter.WriteLine ซึ่งอาจมีการใช้ WriteLine หรือ String.Format โดยที่จำนวนตัวแปรไม่ตรงกับตัวแทนที่ระบุในสตริงรูปแบบ
+ตรวจสอบในโค้ดของคุณว่ามีการเรียกใช้ WriteLine หรือ String.Format ที่ใช้ตัวแทนในรูปแบบ {0}, {1} ฯลฯ โดยไม่ได้ส่งอาร์กิวเมนต์ที่ตรงกับจำนวนตัวแทนเหล่านั้นหรือไม่
+
+#!csharp
+
+Console.WriteLine("{0}, {1} and {0}", 3, 6);
