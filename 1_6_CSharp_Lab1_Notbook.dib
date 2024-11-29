@@ -64,6 +64,8 @@ Console.WriteLine("World!");
 #!csharp
 
 // Coding Area
+Console.Write("Hello, ");
+Console.WriteLine("World!");
 
 #!markdown
 
@@ -82,6 +84,9 @@ Console.WriteLine("This is text 3.");
 #!csharp
 
 // Coding Area
+Console.WriteLine("This is text 1.");
+Console.WriteLine("This is text 2.");
+Console.WriteLine("This is text 3.");
 
 #!markdown
 
@@ -105,6 +110,7 @@ Console.WriteLine("{1}, {0} and {1}", 3, 6);
 #!csharp
 
 // Coding Area
+Console.WriteLine("{1}, {0} and {1}", 3, 6);
 
 #!markdown
 
@@ -117,6 +123,11 @@ Console.WriteLine("{1}, {2} and {1}", 3, 6);
 #!csharp
 
 // Coding Area
+Console.WriteLine("{1}, {2} and {1}", 3, 6);
+
+#!markdown
+
+error เพราะ โจทย์กำหนดตัวเลขมาแค่สองตำแหน่งคือ3,6 ซึ่งอยู่ในตำแหน่ง0และ1 แต่Codให้แสดงผลตำแหน่งที่ 2 จึงทำให้เกิดผล error
 
 #!markdown
 
@@ -145,6 +156,16 @@ Console.WriteLine("{0, 20}", 1);
 #!csharp
 
 // Coding Area
+Console.WriteLine("00000000011111111112");
+Console.WriteLine("12345678901234567890");
+Console.WriteLine("{0, 0}", 1);
+Console.WriteLine("{0, 1}", 1);
+Console.WriteLine("{0, 2}", 1);
+Console.WriteLine("{0, 3}", 1);
+Console.WriteLine("{0, 5}", 1);
+Console.WriteLine("{0, 10}", 1);
+Console.WriteLine("{0, 15}", 1);
+Console.WriteLine("{0, 20}", 1);
 
 #!markdown
 
@@ -165,6 +186,13 @@ Console.WriteLine("{0, 0:X}", n);
 #!csharp
 
 // Coding Area
+int n = 123456789;
+Console.WriteLine("{0, 0:E}", n);
+Console.WriteLine("{0, 0:F}", n);
+Console.WriteLine("{0, 0:G}", n);
+Console.WriteLine("{0, 0:N}", n);
+Console.WriteLine("{0, 0:P}", n);
+Console.WriteLine("{0, 0:X}", n);
 
 #!markdown
 
@@ -185,6 +213,13 @@ Console.WriteLine("{0, 20:X}", 1);
 #!csharp
 
 // Coding Area
+int n = 123456789;
+Console.WriteLine("{0, 20:E}", 1);
+Console.WriteLine("{0, 20:F}", 1);
+Console.WriteLine("{0, 20:G}", 1);
+Console.WriteLine("{0, 20:N}", 1);
+Console.WriteLine("{0, 20:P}", 1);
+Console.WriteLine("{0, 20:X}", 1);
 
 #!markdown
 
@@ -203,3 +238,9 @@ Console.WriteLine("{0:F5}", i);
 #!csharp
 
 // Coding Area
+const double i = 123.456789d;
+Console.WriteLine("{0:F1}", i);
+Console.WriteLine("{0:F2}", i);
+Console.WriteLine("{0:F3}", i);
+Console.WriteLine("{0:F4}", i);
+Console.WriteLine("{0:F5}", i);
