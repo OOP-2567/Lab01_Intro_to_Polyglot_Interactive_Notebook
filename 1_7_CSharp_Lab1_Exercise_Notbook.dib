@@ -180,3 +180,4 @@ int i;
 #!csharp
 
 // Coding Area
+Console.WriteLine("{0:#.###}.", 1234.56789);
