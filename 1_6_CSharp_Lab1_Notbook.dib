@@ -43,6 +43,8 @@ Console.Write("Hello" + Environment.NewLine);
 #!csharp
 
 // Coding Area
+Console.Write("Hello" + Environment.NewLine);
+Console.Write("Hello" + Environment.NewLine);
 
 #!markdown
 
