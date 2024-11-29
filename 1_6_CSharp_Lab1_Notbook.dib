@@ -68,6 +68,8 @@ Console.WriteLine("World!");
 #!csharp
 
 // Coding Area
+Console.Write("Hello, ");
+Console.WriteLine("World!");
 
 #!markdown
 
@@ -86,6 +88,9 @@ Console.WriteLine("This is text 3.");
 #!csharp
 
 // Coding Area
+Console.WriteLine("This is text 1.");
+Console.WriteLine("This is text 2.");
+Console.WriteLine("This is text 3.");
 
 #!markdown
 
