@@ -148,8 +148,6 @@ at Submission#6.<<Initialize>>d__0.MoveNext()
 --- End of stack trace from previous location ---
 at Microsoft.CodeAnalysis.Scripting.ScriptExecutionState.RunSubmissionsAsync[TResult](ImmutableArray`1 precedingExecutors, Func`2 currentExecutor, StrongBox`1 exceptionHolderOpt, Func`2 catchExceptionOpt, CancellationToken cancellationToken)
 
-เนื่องจากการใช้ tag ใน string ของ Console.WriteLine ในโจทย์ มี parameter 2 ตัว คือ a , b แต่มี tag (0),(1),(2)
-
 #!markdown
 
 ## การกำหนดความกว้างของอาร์กิวเมนต์
