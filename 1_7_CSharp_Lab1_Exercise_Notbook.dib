@@ -42,6 +42,7 @@ Console.WriteLine("{2:d} {0:d} {1:d}", 1, 2, 3);
 #!csharp
 
 // Coding Area
+Console.WriteLine("Hello " + "World");
 
 #!markdown
 
