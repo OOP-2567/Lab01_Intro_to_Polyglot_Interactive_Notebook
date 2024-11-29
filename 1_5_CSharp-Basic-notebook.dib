@@ -106,8 +106,10 @@ System.Console.WriteLine("The value of var1 is {0}", var1);
 
 #!csharp
 
-// เขียน code ตามตัวอย่างด้านบน
+// เขียน code ตามตัวอย่างด้านบน 
+int var1 = 5;
 // << คลิกเพื่อรัน code ในบล็อกนี้
+System.Console.WriteLine("The value of var1 is {0}", var1);
 
 #!markdown
 
@@ -125,6 +127,10 @@ System.Console.WriteLine("The value of var1 is {0}", var1);
 #!csharp
 
 // เขียน code ตามตัวอย่างด้านบน
+{
+    int var1 = 5;
+    System.Console.WriteLine("The value of var1 is {0}", var1);
+}
 // << คลิกเพื่อรัน code ในบล็อกนี้
 
 #!markdown
@@ -238,6 +244,17 @@ class Program
 #!csharp
 
 // เขียน code ตามตัวอย่างด้านบน
+class Program
+{
+    enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+    static void Main(string[] args)
+    {
+        int x = (int)Days.Sunday;
+        int y = (int)Days.Friday;
+        Console.WriteLine("Sunday = {0}", x);
+        Console.WriteLine("Friday = {0}", y);
+    }
+}
 // << คลิกเพื่อรัน code ในบล็อกนี้
 
 #!markdown
